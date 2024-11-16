@@ -25,7 +25,7 @@
         <!-- Events-->
         <section class="page-section" id="events">
             <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">Próximos eventos</h2>
+                <h2 class="text-center mt-0">Próximos eventossss</h2>
                 <hr class="divider divider-dark" />
                 <div class="gx-4 gx-lg-5">
                     <div class="row mt-4">

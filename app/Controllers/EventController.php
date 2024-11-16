@@ -42,7 +42,7 @@ class EventController extends baseController
         }
 
         $this->view('Events/Inicio', [
-            'title' => 'Eventos',
+            'title' => 'Solicitudes',
             'events' => $events
         ], true);
     }

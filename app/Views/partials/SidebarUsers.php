@@ -28,13 +28,13 @@
 
     <?php if ((int) $session_user->role->nivel === 1): ?>
         <li>
-            <a href="<?php echo $helpers->generateUrl('participantes', 'index') ?>"><span class="far fa-calendar"></span> Eventos</a>
+            <a href="<?php echo $helpers->generateUrl('participantes', 'index') ?>"><span class="far fa-calendar"></span> Mis Solicitudes</a>
         </li>
     <?php endif; ?>
 
     <?php if ((int) $session_user->role->nivel === 1): ?>
         <li>
-            <a href="<?php echo $helpers->generateUrl('news', 'index') ?>"><span class="far fa-newspaper"></span> Noticias</a>
+            <a href="<?php echo $helpers->generateUrl('news', 'index') ?>"><span class="far fa-newspaper"></span> Solicitar</a>
         </li>
     <?php endif; ?>
     <li>
@@ -57,13 +57,9 @@
 
     <?php if ((int) $session_user->role->nivel === 1): ?>
         <li>
-            <a href="assets/docs/Manual de usuario 4.0 (Lector).pdf" target="_blank"><span class="far fa-circle-question"></span> Ayuda</a>
-        </li>
-    <?php endif; ?>
-
-    <?php if ((int) $session_user->role->nivel === 5): ?>
-        <li>
-            <a href="assets/docs/Manual de usuario 4.0 (Bibliotecaria).pdf" target="_blank"><span class="far fa-circle-question"></span> Ayuda</a>
+            <a href="<?php echo $helpers->generateUrl('auth', 'logout') ?>">
+                <span class="fas fa-sign-out-alt"></span> Cerrar sesión
+            </a>
         </li>
     <?php endif; ?>
 </ul>

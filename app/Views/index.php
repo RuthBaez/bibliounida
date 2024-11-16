@@ -9,17 +9,19 @@
     <title><?php echo $title ?> | Biblioteca "Agustín Codazzi"</title>
 
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="./assets/libs/font-awesome/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Datatables -->
     <!-- <link rel="stylesheet" href="./assets/libs/datatables/css/jquery.dataTables.min.css"> -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- BOOTSTRAP AND CUSTOM CSS -->
     <link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/estilos.css">
+    <link rel="stylesheet" href="/assets//css/estilos.css">
+
     <link rel="stylesheet" href="./assets/css/sidebar.css">
 
     <link rel="stylesheet" href="./assets/css/fullcalendar-custom.css">

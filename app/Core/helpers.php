@@ -32,7 +32,7 @@ class helpers {
         if (isset($message['type']) && isset($message['notification'])) {
             return "
                 <div class=\"alert alert-{$message['type']} alert-dismissible fade show\" role=\"alert\">
-                    ${icon} {$message['notification']}
+                    {$icon} {$message['notification']}
                     <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
                 </div>
             ";

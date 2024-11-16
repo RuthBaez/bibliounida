@@ -34,25 +34,41 @@ class Prestamo extends baseModel
 
     public function save()
     {
-        $query = "INSERT INTO {$this->table} (numero_carnet2, id_libro2, fecha_entrega, fecha_devolucion, observaciones_p, pendiente, calificacion) VALUES (:numero_carnet2, :id_libro2, :fecha_entrega, :fecha_devolucion, :observaciones_p, :pendiente, :calificacion)";
+        // Inserta un nuevo registro en la base de datos
+        $query = "INSERT INTO {$this->table} (numero_carnet2, id_libro2, fecha_entrega, fecha_devolucion, observaciones_p, pendiente, calificacion) 
+                  VALUES (:numero_carnet2, :id_libro2, :fecha_entrega, :fecha_devolucion, :observaciones_p, :pendiente, :calificacion)";
 
         $stmt = $this->database->prepare($query);
+
+        // Asocia los parámetros con los valores correspondientes
         $stmt->bindParam(':numero_carnet2', $this->numero_carnet2);
         $stmt->bindParam(':id_libro2', $this->id_libro2);
         $stmt->bindParam(':fecha_entrega', $this->fecha_entrega);
         $stmt->bindParam(':fecha_devolucion', $this->fecha_devolucion);
         $stmt->bindParam(':observaciones_p', $this->observaciones_p);
-        $stmt->bindParam(':calificacion', $this->pendiente);
-        $stmt->bindParam(':pendiente', $this->calificacion);
+        $stmt->bindParam(':pendiente', $this->pendiente);
+        $stmt->bindParam(':calificacion', $this->calificacion);
 
+        // Ejecuta la consulta
         return $stmt->execute();
     }
 
     public function update()
     {
-        $query = "UPDATE {$this->table} SET numero_carnet2 = :numero_carnet2, id_libro2 = :id_libro2, fecha_entrega = :fecha_entrega, fecha_devolucion = :fecha_devolucion, observaciones_p = :observaciones_p, pendiente = :pendiente, calificacion = :calificacion  WHERE id_p = :id_p";
+        // Actualiza un registro existente
+        $query = "UPDATE {$this->table} 
+                  SET numero_carnet2 = :numero_carnet2, 
+                      id_libro2 = :id_libro2, 
+                      fecha_entrega = :fecha_entrega, 
+                      fecha_devolucion = :fecha_devolucion, 
+                      observaciones_p = :observaciones_p, 
+                      pendiente = :pendiente, 
+                      calificacion = :calificacion  
+                  WHERE id_p = :id_p";
 
         $stmt = $this->database->prepare($query);
+
+        // Asocia los parámetros con los valores correspondientes
         $stmt->bindParam(':id_p', $this->id_p);
         $stmt->bindParam(':numero_carnet2', $this->numero_carnet2);
         $stmt->bindParam(':id_libro2', $this->id_libro2);
@@ -62,6 +78,7 @@ class Prestamo extends baseModel
         $stmt->bindParam(':pendiente', $this->pendiente);
         $stmt->bindParam(':calificacion', $this->calificacion);
 
+        // Ejecuta la consulta
         return $stmt->execute();
     }
 }
